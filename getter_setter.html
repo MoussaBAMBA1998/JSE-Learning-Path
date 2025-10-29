@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let footInfo = {
+            playerName: "Messi",
+            trophy: 9,
+            years: [2000,2003, 2004,2006, 2007, 2013, 2014, 2015,2016],
+
+            playerName: "Ronaldo",
+            trophy: 5,
+            years: [2003, 2005, 2011, 2012, 2013],
+
+            playerName: "Akim",
+            trophy: 7,
+            years: [2025, 2026, 2027, 2030, 2031, 2032, 2033],
+
+            get read() {
+                return this.playerName, this.trophy, this.years
+            },
+
+            set change(numb) {
+                role = prompt("What'what's your role('his Coach(1)' ,'CAF member(2)', 'others(3)') ?");
+                switch (role) {
+                    case 1:
+                        this.trophy = numb;
+                        break;
+                    case 2:
+                        confirm("you need the agreement of two others members")
+                        break;
+                    default: alert("retake your choice if it persist it mean that you're not othorise to set this");
+                }
+            }
+        }
+        console.log(footInfo.read[1])
+        //console.log(footInfo.change(10))
+        footInfo.change = 10;
+
+    </script>
+</body>
+
+</html>
